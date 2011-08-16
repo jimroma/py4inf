@@ -1,21 +1,25 @@
 #!/usr/bin/python
 
-try:
-	hours = raw_input('Enter Hours ')
-	rate = raw_input('Enter Rate ')
-	h = float(hours)
-	r = float(rate)
-	if h > 40.0 :
-		ot = h - 40.0
-		otRate = r * 1.5
-		print "OT Hours: ", ot
-		print "OT Rate: ", otRate
-		otPay = ot * otRate
-		pay = (40.0 * r) + otRate
-		print "OT Pay: ", otPay
-		print "Total Pay: ", pay
-	else:
-		pay = h * r
-		print pay
-except:
-	print "Enter valid numeric input"
+
+def rate(h, r):
+	try:
+		if float(h) > 40.0:
+			ot = float(h) - 40.0
+			otRate = float(r) * 1.5
+			otPay = ot * otRate
+			pay = (float(r) * 40.0) + otPay
+			return pay
+		elif float(h) < 40.0:	
+			x = (float(h) * float(r))
+			return x
+	except:
+		print "invalid imput"
+		
+h = raw_input('Enter Hours ')
+r = raw_input('Enter Rate ')
+
+
+pay = rate(h, r)
+
+print str(pay)
+
