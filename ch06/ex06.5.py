@@ -2,5 +2,10 @@
 
 str = 'X-DSPAM-Confidence:   0.8475'
 x = str.find(':')
-print x
+start = x + 1
+num = float(str[start:].lstrip())
+print num
+
+
+
 
