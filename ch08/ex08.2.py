@@ -10,7 +10,7 @@ for line in fhand:
     if len(words) < 3 : continue
     
     print words[2]
-    print len(words)
+    
 
 
 
