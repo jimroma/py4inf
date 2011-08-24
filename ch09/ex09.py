@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import string
+#fhand = open('words.txt')
 fhand = open('romeo-full.txt')
 counts = dict()
 
