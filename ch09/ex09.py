@@ -14,7 +14,11 @@ for line in fhand:
 			counts[word] = 1
 		else:
 			counts[word] += 1
-
+			
+			
+print counts			
+			
+'''
 # Sort the dictionary by value
 lst = list()
 for key, val in counts.items():
@@ -23,5 +27,8 @@ lst.sort(reverse=True)
 
 for key, val in lst[:10] :
 	print key, val
+'''
+
+
 
 
