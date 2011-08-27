@@ -3,17 +3,7 @@
 import string
 fhand = open('mbox-short.txt')
 counts = dict()
-
-'''
-for line in fhand:
-    if 'From ' in line:
-        words = line.split()
-        word = words[1]
-    if word not in counts:
-        counts[word] = 1
-    else:
-        counts[word] += 1
-'''        
+       
 for line in fhand:
 	if 'From ' in line:
 		#print line
