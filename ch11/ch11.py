@@ -1,18 +1,22 @@
 #!/usr/bin/python
 
 import re
-search = raw_input('Enter a regular expression: ')
+
 hand = open('mbox.txt')
-c = 0
+
 
 for line in hand:
 	line = line.rstrip()
-	if re.search(search, line) :
-		c += 1
+	x = re.findall('^New Revision: ([0-9]*)', line)
+	if x > 0 : 
+		print x
+	
 		
 
-print 'mbox.txt had', c, 'line that matched', search
 
+
+
+# New Revision: 39772
 
 		
 		
