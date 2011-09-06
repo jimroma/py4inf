@@ -5,6 +5,21 @@ import re
 from BeautifulSoup import *
 
 
+img = urllib.urlopen('http://www.py4inf.com/cover.jpg')
+fhand = open('cover.jpg', 'wb')
+
+size = 0
+while True:
+	info = img.read(100000)
+	if len(info) < 1 : break
+	size = size + len(info)
+	fhand.write(info)
+	
+print size, 'characters copied.'
+fhand.close()
+
+
+'''
 url = raw_input('Enter - ')
 html = urllib.urlopen(url).read()
 soup = BeautifulSoup(html)
@@ -12,9 +27,13 @@ soup = BeautifulSoup(html)
 #Retrieve all anchor tags
 tags = soup('a')
 for tag in tags:
-	print tag.get('href', None)
-
-
+	# Look at the parts of a tag
+	print 'TAG:',tag
+	print 'URL:',tag.get('href', None)
+	print 'Content:',tag.contents[0]
+	print 'Attrs:', tag.attrs
+'''
+	
 
 
 '''
