@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-name = raw_input("Enter your name: \n")
+name = raw_input("Enter your name NOW!!!!: \n")
 print "Hello", name
 
 hours = raw_input("Enter hours: \n")
